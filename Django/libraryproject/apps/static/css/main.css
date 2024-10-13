@@ -1,98 +1,78 @@
-/* Add a black background color to the top navigation */
-.topnav {
-    background-color: #eeeeee;
-    width: 100%;
-   }
-
-/* Style the links inside the navigation bar */
-.topnav a {
-    color: #000000;
-    text-align: center;
-    margin-right: 25px;
-    text-decoration: none;
-    font-size: 17px;
-   }
-   /* Add a color to the active/current link */
-   .topnav a.active{
-    color: #008CBA;
-   }
-
-.formatted-title {
-    color: white; /* Text color */
-    background-color: #007BFF; /* Background color */
-    padding: 10px; /* Padding around the text */
-    border-radius: 5px; /* Rounded corners */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-
-/* Style for the entire container holding the links */
-.link-container {
-    text-align: center;
+body {
+    font-family: Arial, sans-serif;
     padding: 20px;
 }
 
-/* Base styling for all links */
-.link {
-    display: block;
-    padding: 15px;
-    font-size: 18px;
-    margin: 10px auto;
-    width: 70%;
+.container {
+    max-width: 900px;
+    margin: 0 auto;
     text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 
-/* Specific styles for each link */
-.link-new-tab {
-    background-color: lightgreen;
-    color: red;
+h2 {
+    margin: 20px 0;
 }
 
-.link-same-tab {
-    background-color: gray;
-    color: yellow;
-}
-
-.link-action {
-    background-color: black;
-    color: white;
-}
-
-/* Hover effect */
-.link:hover {
-    opacity: 0.9;
-}
-
-/* Customize hover effect for individual links */
-.link-new-tab:hover {
-    background-color: lightcoral; /* Change background on hover */
-}
-
-.link-same-tab:hover {
-    background-color: darkgray;
-}
-
-.link-action:hover {
-    background-color: darkslategray;
-}
-
-/* Visited link state */
-.link:visited {
-    color: purple;
-}
-
-/* Active link state when clicked */
-.link:active {
-    opacity: 0.6;
-    background-color: orange; /* Active link background */
-}
-
-.table, .th, .td {
+/* Add border to first table */
+.simple-table {
     border: 1px solid black;
-  }
+}
 
-  .table {
+table {
+    width: auto;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+.simple-table th, .simple-table td {
     width: 50%;
+}
+
+th {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+td[colspan="2"] {
+    text-align: center;
+    font-weight: bold;
+}
+
+.complex-table {
+    margin: 20px auto;
+    text-align: center;
+    display: block;
+}
+
+.complex-table .table-content {
+    margin: 0 auto;
+    display: block;
+}
+
+.complex-table table {
+    margin: 0 auto;
+    width: auto;
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: 10px auto;
 }

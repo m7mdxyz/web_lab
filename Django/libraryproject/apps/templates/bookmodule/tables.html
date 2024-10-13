@@ -1,71 +1,84 @@
 <!DOCTYPE html>
-<html>
-    {% load static %}
+<html lang="en">
+    {%load static%}
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tables and Layout Customization</title>
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 <body>
-    <h1>Tables and Layout Customization</h1>
+    <div class="container">
+        <!-- Table 1: Simple Table of Fruits and Prices -->
+        <h2>Table 1: Table of Fruits and Their Prices</h2>
+        <table class="simple-table centered">
+            <tr>
+                <th>Fruit</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Apple</td>
+                <td>$0.25</td>
+            </tr>
+            <tr>
+                <td>Orange</td>
+                <td>$0.50</td>
+            </tr>
+            <tr>
+                <td>Banana</td>
+                <td>$1.00</td>
+            </tr>
+            <tr>
+                <td>Pineapple</td>
+                <td>$2.00</td>
+            </tr>
+            <tr>
+                <td><b>Total</b></td>
+                <td><b>$3.75</b></td>
+            </tr>
+        </table>
 
-    <h2>Table 1: Table of Fruits and Their Prices</h2>
-    <table class="table">
-        <tr>
-            <th class="th">Fruit</th>
-            <th class="th">Price</th> 
-        </tr>
-        <tr>
-            <td class="td"class="td">Apple</td>
-            <td class="td"class="td">$0.25</td>
-        </tr>
-        <tr>
-            <td class="td"class="td">Orange</td>
-            <td class="td"class="td">$0.50</td>
-        </tr>
-        <tr>
-            <td class="td"class="td">Banana</td>
-            <td class="td"class="td">$1.00</td>
-        </tr>
-        <tr>
-            <td class="td"class="td">Pineapple</td>
-            <td class="td"class="td">$2.00</td>
-        </tr>
-    </table>
-
-    <h2>Table 2: A More Complex Sample Table</h2>
-    <table class="table">
-        <table>
-            <caption>Table 2: A More Complex Sample Table</caption>
-            <tr>
-                <td class="td"rowspan="4">
-                    <img src="{% static 'desert.jpg'%}" alt="Desert" width="200" height="200">  </td>
-                <th class="th"># of Humps</th>
-                <th class="th">Indigenous Region</th>
-                <th class="th">Spits?</th>
-                <th class="th">Produces Wool?</th>
-            </tr>
-            <tr>
-                <td class="td">Dromedary</td>
-                <td class="td">1</td>
-                <td class="td">Arabian Peninsula</td>
-                <td class="td">Yes</td>
-                <td class="td">Yes</td>
-            </tr>
-            <tr>
-                <td class="td">Camels (bactrian)</td>
-                <td class="td">2</td>
-                <td class="td">Africa/Asia</td>
-                <td class="td">Yes</td>
-                <td class="td">Yes</td>
-            </tr>
-            <tr>
-                <td class="td">Llamas</td>
-                <td class="td">1</td>
-                <td class="td">Andes Mountains</td>
-                <td class="td">Yes</td>
-                <td class="td">Yes</td>
-            </tr>
-        </table> 1
-    </table>
+        <!-- Table 2: Complex Table with Image and Camelid Comparison -->
+        <h2>Table 2: A more complex sample table</h2>
+        <div class="complex-table">
+            <div class="table-content">
+                <table class="centered">
+                    <tr>
+                        <th rowspan=2>
+                            <img width="300" height="200" src="{% static 'desert.jpg'%}" alt="Desert Image" />
+                        </th>
+                        <th colspan=4>Camelid comparison Approximate as of 6/2011</th>
+                    </tr>
+                    <tr>
+                        <th># of humps</th>
+                        <th>Indigenous region</th>
+                        <th>Spits?</th>
+                        <th>Produces wool?</th>
+                    </tr>
+                    <tr>
+                        <td>Dromedary</td>
+                        <td>1</td>
+                        <td>Arabian Peninsula</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Camels (bactrian)</td>
+                        <td>2</td>
+                        <td>Africa/Asia</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Llamas</td>
+                        <td>1</td>
+                        <td>Andes Mountains</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
