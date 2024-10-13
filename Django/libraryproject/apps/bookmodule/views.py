@@ -9,8 +9,15 @@ def list_books(request):
 def viewbook(request, bookId):
     return render(request, 'bookmodule/one_book.html')
 def aboutus(request):
-     return render(request, 'bookmodule/aboutus.html')
-
+    return render(request, 'bookmodule/aboutus.html')
+def links(request):
+    return render(request, 'bookmodule/links.html')
+def show_text_formatting(request):
+    return render(request, "bookmodule/text_formatting.html")
+def listing(request):
+    return render(request, "bookmodule/listing.html")
+def tables(request):
+    return render(request, "bookmodule/tables.html")
 # def index2(request, val1 = 0): #add the view function (index2)
 #  return HttpResponse("value1 = "+str(val1))
 

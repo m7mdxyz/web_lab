@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+<head>
+    <title>Tables and Layout Customization</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <h1>Tables and Layout Customization</h1>
+
+    <h2>Table 1: Table of Fruits and Their Prices</h2>
+    <table class="table">
+        <tr>
+            <th class="th">Fruit</th>
+            <th class="th">Price</th> 
+        </tr>
+        <tr>
+            <td class="td"class="td">Apple</td>
+            <td class="td"class="td">$0.25</td>
+        </tr>
+        <tr>
+            <td class="td"class="td">Orange</td>
+            <td class="td"class="td">$0.50</td>
+        </tr>
+        <tr>
+            <td class="td"class="td">Banana</td>
+            <td class="td"class="td">$1.00</td>
+        </tr>
+        <tr>
+            <td class="td"class="td">Pineapple</td>
+            <td class="td"class="td">$2.00</td>
+        </tr>
+    </table>
+
+    <h2>Table 2: A More Complex Sample Table</h2>
+    <table class="table">
+        <table>
+            <caption>Table 2: A More Complex Sample Table</caption>
+            <tr>
+                <td class="td"rowspan="4">
+                    <img src="{% static 'desert.jpg'%}" alt="Desert" width="200" height="200">  </td>
+                <th class="th"># of Humps</th>
+                <th class="th">Indigenous Region</th>
+                <th class="th">Spits?</th>
+                <th class="th">Produces Wool?</th>
+            </tr>
+            <tr>
+                <td class="td">Dromedary</td>
+                <td class="td">1</td>
+                <td class="td">Arabian Peninsula</td>
+                <td class="td">Yes</td>
+                <td class="td">Yes</td>
+            </tr>
+            <tr>
+                <td class="td">Camels (bactrian)</td>
+                <td class="td">2</td>
+                <td class="td">Africa/Asia</td>
+                <td class="td">Yes</td>
+                <td class="td">Yes</td>
+            </tr>
+            <tr>
+                <td class="td">Llamas</td>
+                <td class="td">1</td>
+                <td class="td">Andes Mountains</td>
+                <td class="td">Yes</td>
+                <td class="td">Yes</td>
+            </tr>
+        </table> 1
+    </table>
+</body>
+</html>
