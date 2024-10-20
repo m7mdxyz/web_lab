@@ -10,4 +10,5 @@ urlpatterns = [
     path('html5/text/formatting/', views.show_text_formatting, name="books.show_text_formatting"),
     path('html5/listing/', views.listing, name="books.listing"),
     path('html5/tables/', views.tables, name="books.tables"),
+    path('search/', views.serachBook, name="books.search"),
 ]
