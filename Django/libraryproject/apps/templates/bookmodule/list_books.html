@@ -1,8 +1,11 @@
 {% extends "layouts/base.html" %}
 {% load static %}
 {% block title %} List of books {% endblock title %}
-{% block content %}
-<style> /* add internal css */
+
+{% block stylesheets %} 
+
+<style> 
+    /* add internal css */
     h1{
     color: green;
     }
@@ -13,11 +16,14 @@
     font-family: verdana;
     font-size: 20px;
     }
-   
-    </style>
+</style>
+
+{% endblock stylesheets%}
+
+{% block content %}
 
 <h1>List of Books</h1>
- <a href="{% url 'books.one_book' bookId=1 %}"><h2>Internet & World Wide Web How to Program</h2></a>
+ <a href="{% url 'books.one_book' bookId=1 %}"><h2>1) Internet & World Wide Web How to Program</h2></a>
  <a href="{% url 'books.one_book' bookId=1 %}"><img src="{% static 'book1.jpg'%}" alt="Book1 img desc" width="200" height="200"></a>
  <hr>
  <h2>2) C++ How to Program, Late Objects Version</h2>
