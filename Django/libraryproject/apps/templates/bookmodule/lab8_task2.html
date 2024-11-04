@@ -1,0 +1,16 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Lab 8 - Task 2 {% endblock title %}
+
+{% block content %}
+
+    <h2>Books list</h2>
+    
+    {% for obj in books %}
+        
+    <b>ID:</b> {{obj.id}}, <b>Title:</b> {{obj.title}}, <b>Author:</b> {{obj.author}}, <b>Edition:</b> {{obj.edition}}
+    <hr>
+
+    {% endfor %}
+    
+{% endblock content %}

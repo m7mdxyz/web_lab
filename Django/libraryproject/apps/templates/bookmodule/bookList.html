@@ -22,9 +22,9 @@
     
     {% for obj in books %}
         
-        ID: {{obj.id}}, Title: {{obj.title}}
+        <b>ID:</b> {{obj.id}}, <b>Title:</b> {{obj.title}}, <b>Price:</b> ${{obj.price}}
         <hr>
 
-    {% endfor%}
+    {% endfor %}
     
 {% endblock content %}
