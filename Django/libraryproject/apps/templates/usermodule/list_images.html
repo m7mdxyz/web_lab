@@ -1,0 +1,21 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Lab 10 {% endblock title %}
+
+{% block content %}
+
+    <h1>Uploaded Images</h1>
+    <a href="{% url 'upload_image' %}">Upload New Image</a>
+    <ul>
+        {% for image in images %}
+            <li>
+                {{ image.title }}<br>
+                <img src="{{ image.image.url }}" alt="{{ image.title }}" width="200"><br>
+                <a href="{% url 'delete_image' image.id %}">Delete</a>
+            </li>
+            <hr>
+        {% endfor %}
+    </ul>
+
+
+{% endblock content %}
