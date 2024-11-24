@@ -19,4 +19,8 @@ urlpatterns = [
     path('images/', views.list_images, name='list_images'),
     path('images/upload/', views.upload_image, name='upload_image'),
     path('images/delete/<int:image_id>/', views.delete_image, name='delete_image'),
+    # lab 11
+    path('register', views.register, name='register'),
+    path('login', views.login_user, name='login'),
+    path('logout', views.logout_user, name='logout'),
 ]

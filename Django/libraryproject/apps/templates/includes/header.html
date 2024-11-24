@@ -1,7 +1,13 @@
 <div class="topnav">
-    <a href="{% url "books.index" %}">Home</a> <!-- URL template tag-->
-    <a href="{% url "books.search" %}">Search</a> <!-- URL template tag-->
-    <a href="{% url "books.list_books" %}">List Books</a> <!-- URL template tag -->
-    <a href="{% url "list_students" %}">List Students</a> <!-- URL template tag -->
-    <a href="{% url "books.aboutus" %}">About</a> <!-- URL template tag -->
-   </div>
+    <a href="{% url 'books.index' %}">Home</a> <!-- URL template tag-->
+    <a href="{% url 'books.search' %}">Search</a> <!-- URL template tag-->
+    <a href="{% url 'books.list_books' %}">List Books</a> <!-- URL template tag -->
+    <a href="{% url 'list_students' %}">List Students</a> <!-- URL template tag -->
+    <a href="{% url 'books.aboutus' %}">About</a> <!-- URL template tag -->
+    {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}">Logout</a>
+        <span style="float: right; margin-right: 20px;">Welcome, {{ user.username }}!</span>
+    {% else %}
+    <a href="{% url 'login' %}">Login</a>
+    {% endif %}
+</div>

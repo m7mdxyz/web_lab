@@ -20,6 +20,16 @@
 <body>
 
  {% include "includes/header.html" %}
+
+ <!-- Display messages -->
+ {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li class="{{ message.tags }}">{{ message }}</li>
+        {% endfor %}
+    </ul>
+ {% endif %}
+
  {% block content %} {% endblock content %}
  {% include "includes/footer.html" %}
 
