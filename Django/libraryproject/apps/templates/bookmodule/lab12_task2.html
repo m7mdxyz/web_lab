@@ -1,0 +1,61 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Lab 12 - Task 2{% endblock title %}
+
+{% block stylesheets %}
+<style>
+    ul {
+        margin: 20px auto;
+        padding: 10px;
+        width: 300px;
+        border: 1px solid black;
+        list-style-type: none;
+    }
+
+    li {
+        margin: 5px 0;
+        padding: 5px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .button-container {
+        text-align: center;
+        margin: 20px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+{% endblock stylesheets %}
+
+{% block content %}
+<h2 style="text-align: center;">Task 2 - Add Items to List</h2>
+
+<div class="button-container">
+    <button id="addItemBtn">Add Item</button>
+</div>
+
+<ul id="itemList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+
+<script>
+    const itemList = document.getElementById('itemList');
+    const addItemBtn = document.getElementById('addItemBtn');
+    let itemCount = 3;
+
+    addItemBtn.addEventListener('click', () => {
+        itemCount++;
+        const newItem = document.createElement('li');
+        newItem.textContent = `Item ${itemCount}`;
+        itemList.appendChild(newItem);
+    });
+</script>
+{% endblock content %}

@@ -1,0 +1,51 @@
+{% extends 'layouts/base.html' %}
+{%load static %}
+{% block title %} Lab 12 - Task 3 {% endblock title %}
+
+
+{% block stylesheets %}
+<style>
+    #myDIV {
+        width: 300px;
+        height: 150px;
+        margin: 20px auto;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: lightblue;
+        font-size: 18px;
+      }
+
+    .button-container {
+        text-align: center;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+{% endblock stylesheets %}
+
+{% block content %}
+<h2 style="text-align: center;">Task 3 - Toggle Visibility</h2>
+
+<div class="button-container">
+    <button onclick="myFunction()">Toggle Div</button>
+</div>
+
+<div id="myDIV">Some Text.</div>
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "none") {
+        x.style.display = "flex";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    </script>
+{% endblock content %}

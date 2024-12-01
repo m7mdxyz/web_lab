@@ -137,6 +137,19 @@ def lab9_part2_editbook(request, id):
     return render(request, 'bookmodule/lab9_part2_edit_book.html', {'form': form, 'book': book})
 
 
+def lab12_task1(request):
+    return render(request, 'bookmodule/lab12_task1.html')
+
+def lab12_task2(request):
+    return render(request, 'bookmodule/lab12_task2.html')
+
+def lab12_task3(request):
+    return render(request, 'bookmodule/lab12_task3.html')
+
+def lab12_task4(request):
+    return render(request, 'bookmodule/lab12_task4.html')
+
+
 # def index2(request, val1 = 0): #add the view function (index2)
 #  return HttpResponse("value1 = "+str(val1))
 

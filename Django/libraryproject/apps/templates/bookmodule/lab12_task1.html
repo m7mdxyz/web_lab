@@ -1,0 +1,53 @@
+{% extends 'layouts/base.html' %}
+{%load static %}
+{% block title %} Lab 12 - Task 1 {% endblock title %}
+
+{% block stylesheets %}
+<style>
+    #myDiv {
+        width: 200px;
+        height: 100px;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px auto;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .button-container {
+        text-align: center;
+    }
+
+    button {
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+{% endblock stylesheets %}
+
+{% block content %}
+<div id="myDiv">Default Text</div>
+
+<div class="button-container">
+    <button id="changeColorBtn">Change Background Color</button>
+    <button id="changeTextBtn">Change Text</button>
+</div>
+
+<script>
+    const myDiv = document.getElementById('myDiv');
+    const changeColorBtn = document.getElementById('changeColorBtn');
+    const changeTextBtn = document.getElementById('changeTextBtn');
+
+    changeColorBtn.addEventListener('click', () => {
+        myDiv.style.backgroundColor = 'green';
+    });
+
+    changeTextBtn.addEventListener('click', () => {
+        myDiv.textContent = 'Text Changed';
+    });
+</script>
+{% endblock content %}
